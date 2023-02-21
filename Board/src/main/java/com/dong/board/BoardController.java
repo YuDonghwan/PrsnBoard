@@ -68,6 +68,16 @@ public class BoardController {
 		return "board/boarddetail";
 	}
 	
+	@PostMapping("/board/boardedit")
+	public String boardedit(HttpServletRequest req,String bseq) {
+
+		BoardDTO bdto = bservice.getBDTO(bseq);
+		
+		req.setAttribute("bdto", bdto);
+		
+		return "board/boardedit";
+	}
+	
 	
 	
 	
