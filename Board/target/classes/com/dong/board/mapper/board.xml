@@ -3,6 +3,19 @@
 
 <mapper namespace="board">
 	
+	<insert id="boardadd" parameterType="bdto">
+		insert into tblBoard(bseq,subject,viewcnt,content,regdate,mseq) values (seqboard.nextVal,#{subject},default,#{content},default,#{mseq})
+	
+	</insert>
+	
+	<select id="blist" resultType="bdto">
+		select * from tblboard b inner join tblmember m on b.mseq = m.mseq order by regdate desc
+	</select>
+	
+	
+	<select id="getbdto"  parameterType="String" resultType="bdto">
+		select * from tblboard where bseq = #{bseq}
+	</select>
 	
 	
 </mapper>
