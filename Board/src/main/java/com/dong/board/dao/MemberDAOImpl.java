@@ -23,4 +23,8 @@ public class MemberDAOImpl implements MemberDAO{
 		return template.selectOne("member.getmember",mdto);
 	}
 
+	@Override
+	public int registerok(MemberDTO mdto) {
+		return template.insert("member.registerok",mdto);
+	}
 }

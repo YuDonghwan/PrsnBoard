@@ -8,4 +8,5 @@ public interface MemberService {
 
 	MemberDTO getMember(MemberDTO mdto);
 
+    int registerok(MemberDTO mdto);
 }

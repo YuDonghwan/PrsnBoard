@@ -27,5 +27,9 @@ public class MemberServiceImpl implements MemberService {
 	public MemberDTO getMember(MemberDTO mdto) {
 		return mdao.getMember(mdto);
 	}
-	
+
+	@Override
+	public int registerok(MemberDTO mdto) {
+		return mdao.registerok(mdto);
+	}
 }

@@ -52,10 +52,23 @@ public class MemberController {
 		} else {
 			return "member/login";
 		}
-		
-		
-		
+
 	}
-	
-	
+	@GetMapping(value="/member/register")
+	public String register() {
+
+
+		return "member/register";
+	}
+
+	@PostMapping(value="/member/registerok")
+	public String registerok(MemberDTO mdto) {
+
+		int result = mservice.registerok(mdto);
+
+		return "redirect:/member/login";
+	}
+
+
+
 }

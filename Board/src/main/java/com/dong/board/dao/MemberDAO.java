@@ -8,4 +8,5 @@ public interface MemberDAO {
 
 	MemberDTO getMember(MemberDTO mdto);
 
+    int registerok(MemberDTO mdto);
 }
