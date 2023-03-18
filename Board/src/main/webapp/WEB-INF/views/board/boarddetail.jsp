@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Junior</title>
 <!-- <link rel="stylesheet" href="https://me2.do/5BvBFJ57"> -->
-<link rel="stylesheet" href="/board/resources/css/main.css">
+<link rel="stylesheet" href="/board/resources/css/board.css">
 <script src="https://kit.fontawesome.com/04d62b639a.js" crossorigin="anonymous"></script>
 
 <style>
@@ -15,18 +15,7 @@ body {
 width: 1500px;
 margin: 0 auto;
 }
-.addBtn {
-font-size: 1.3rem;
-color: white;
-background-color: cornflowerblue;
-padding: 10px;
-outline:none;
-border: none;
-border-radius: 5px;
-margin-top: 70px;
-margin-bottom: 10px;
-cursor: pointer;
-}
+
 </style>
 </head>
 
@@ -40,10 +29,13 @@ cursor: pointer;
 	
 	
 	<form action="/board/board/boardedit" method="POST">
-	<div> 제목 <div>${bdto.subject}</div> </div>
-	<div> 내용<div>${bdto.content}</div></div> 
-	
-	<div> <button type="submit" class="addBtn" >수정</button><button type="button" class="addBtn" >삭제</button> </div>
+	<div> <div class="txt">제목</div> <div id="detail_subject">${bdto.subject}</div> </div>
+	<div> <div class="txt">내용</div><div id="detail_content">${bdto.content}</div></div>
+		<input type="hidden" value="${bdto.bseq}" name="bseq">
+
+		<c:if test="${mdto != null and mdto.mseq == bdto.mseq}">
+	<div class="btns"> <button type="submit" class="addBtn" >수정</button><button type="button" class="addBtn" >삭제</button> </div>
+		</c:if>
 	</form>
 	
 	

@@ -8,19 +8,22 @@
 header {
 	display: flex;
 	justify-content: space-between;
+    position: sticky;
+    border: 1px solid black;
 }
 .logo {
 	font-size: 2rem;
 	font-weight:bold;
 	cursor:pointer;
 }
+
 .board,.login{ 
 	display: flex;
 	margin-top: 10px;
-	
 }
 .login {
-margin-right: 20px;}
+    margin-right: 20px;
+    }
 
 .board > div , .login > div, .logo{
 margin: 20px 10px;
@@ -30,10 +33,6 @@ margin: 20px 10px;
 .board > div , .login > div{
 cursor: pointer;
 font-size: 1.2rem;
-}
-
-hr {
-width: 100%;
 }
 </style>
 
@@ -59,4 +58,4 @@ width: 100%;
 </div>
 </c:if>
 </header>
-<hr>
+    <hr>

@@ -30,4 +30,9 @@ public class BoardDAOImpl implements BoardDAO {
 	public BoardDTO getBDTO(String bseq) {
 		return template.selectOne("board.getbdto",bseq);
 	}
+
+	@Override
+	public int editok(BoardDTO bdto) {
+		return template.update("board.editok",bdto);
+	}
 }

@@ -1,4 +1,4 @@
-package com.dong.board;
+package com.dong.board.controller;
 
 import java.util.List;
 
@@ -77,13 +77,26 @@ public class BoardController {
 		
 		return "board/boardedit";
 	}
-	
-	
-	
-	
-	
-	
-}
+
+	/**
+	 * 게시판 글 수정
+	 * @param req
+	 * @param bdto
+	 * @param session
+	 * @return
+	 */
+	@PostMapping(value="/board/boardeditok")
+	public String boardeditok(HttpServletRequest req,BoardDTO bdto,HttpSession session) {
+
+		System.out.println(bdto);
+		int result = bservice.editok(bdto);
+
+
+			return "redirect:/board/board";
+		}
+	}
+
+
 
 
 

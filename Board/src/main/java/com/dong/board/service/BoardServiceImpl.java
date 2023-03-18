@@ -34,6 +34,11 @@ public class BoardServiceImpl implements BoardService{
 	public BoardDTO getBDTO(String bseq) {
 		return bdao.getBDTO(bseq);
 	}
+
+	@Override
+	public int editok(BoardDTO bdto) {
+		return bdao.editok(bdto);
+	}
 }
 
 

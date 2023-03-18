@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Junior</title>
 <!-- <link rel="stylesheet" href="https://me2.do/5BvBFJ57"> -->
-<link rel="stylesheet" href="/board/resources/css/main.css">
+<link rel="stylesheet" href="/board/resources/css/board.css">
 <script src="https://kit.fontawesome.com/04d62b639a.js" crossorigin="anonymous"></script>
 
 <style>
@@ -36,15 +36,15 @@ cursor: pointer;
 	
 	
 	<!-- -->
-	<h1>글쓰기</h1>
+	<h1>수정하기</h1>
 	
 	
-	<form action="/board/board/boardedit" method="POST">
-	<div> 제목<input type="text" name="subject" value="${bdto.subject}"></div>
-	<div> 내용<textarea name="content">${bdto.content}</textarea> </div> 
-	
-	<div> <button type="submit" class="addBtn" >수정</button> </div>
-	<div> <button type="button" class="addBtn" >삭제</button> </div>
+	<form action="/board/board/boardeditok" method="POST">
+	<div> <div>제목</div><input id="subject" type="text" name="subject" value="${bdto.subject}"></div>
+	<div> <div>내용</div><textarea id="content" name="content">${bdto.content}</textarea> </div>
+		<input type="hidden" name="bseq" value="${bdto.bseq}">
+
+		<div class="btns"> <button type="button" class="addBtn" >돌아가기</button><button type="submit" class="addBtn" >수정</button> </div>
 	</form>
 	
 	

@@ -13,4 +13,5 @@ public interface BoardDAO {
 	BoardDTO getBDTO(String bseq);
 
 
+    int editok(BoardDTO bdto);
 }

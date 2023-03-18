@@ -7,65 +7,12 @@
 <meta charset="UTF-8">
 <title>Junior</title>
 <!-- <link rel="stylesheet" href="https://me2.do/5BvBFJ57"> -->
+
 <link rel="stylesheet" href="/board/resources/css/main.css">
+	<link rel="stylesheet" href="/board/resources/css/board.css">
 <script src="https://kit.fontawesome.com/04d62b639a.js" crossorigin="anonymous"></script>
-
-<style>
-body {
-width: 1500px;
-margin: 0 auto;
-}
-.item {
-height: 130px;
-border-top:1px solid #999;
-border-bottom:1px solid #999;
-
-}
-.item > div {
-margin: 10px 0;
-}
-
-.content {
-font-size: 1.8rem;
-font-weight: bold;
-}
-
-a {
-	text-decoration: none;
-
-}
-a:hover {
-	color: gold;
-	cursor:pointer;
-}
-.sub {
-text-align: right;}
-
-.sub i {
-margin: 0 7px;}
-.item-head {
-display:flex;
-justify-content: space-between;
-
-padding: 7px 0;
-border-top: 1px solid black;
-}
-
-.addBtn {
-font-size: 1.3rem;
-color: white;
-background-color: cornflowerblue;
-padding: 10px;
-outline:none;
-border: none;
-border-radius: 5px;
-margin-top: 70px;
-margin-bottom: 10px;
-cursor: pointer;
-}
-</style>
+<link rel="shortcut icon" href="/board/resources/pic/취업.jpg"/>
 </head>
-
 
 <body>
 <%@include file="/WEB-INF/views/inc/header.jsp" %>	 
@@ -92,13 +39,9 @@ cursor: pointer;
 	<div class="sub"><span><i class="fa-solid fa-eye">${dto.viewcnt}</i></span><span><i class="fa-regular fa-comment">0</i></span><span><i class="fa-regular fa-thumbs-up">0</i></span> </div>
 	</div>
 	</c:forEach>
-	
-	
-	
 
-	<script>
-	
-	
-	</script>
+
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/board/resources/js/main.js"></script>
 </body>
 </html>
