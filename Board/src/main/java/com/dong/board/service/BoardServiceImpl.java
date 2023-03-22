@@ -39,6 +39,15 @@ public class BoardServiceImpl implements BoardService{
 	public int editok(BoardDTO bdto) {
 		return bdao.editok(bdto);
 	}
+
+	@Override
+	public void deleteBrd(String[] arr) {
+
+		for(String s : arr) {
+			bdao.deleteBrd(s);
+		}
+
+	}
 }
 
 

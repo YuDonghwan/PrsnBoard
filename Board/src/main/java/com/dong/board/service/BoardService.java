@@ -13,4 +13,6 @@ public interface BoardService {
 	BoardDTO getBDTO(String bseq);
 
     int editok(BoardDTO bdto);
+
+    void deleteBrd(String[] arr);
 }

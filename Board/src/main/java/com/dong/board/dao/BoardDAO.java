@@ -14,4 +14,6 @@ public interface BoardDAO {
 
 
     int editok(BoardDTO bdto);
+
+    void deleteBrd(String s);
 }

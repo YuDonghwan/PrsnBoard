@@ -20,6 +20,9 @@
 	<update id="editok" parameterType="bdto">
 		update tblboard set subject= #{subject}, content= #{content} where bseq = #{bseq}
 	</update>
-	
+
+	<delete id="deleteok" parameterType="String">
+		delete from tblboard where bseq = #{bseq}
+	</delete>
 	
 </mapper>

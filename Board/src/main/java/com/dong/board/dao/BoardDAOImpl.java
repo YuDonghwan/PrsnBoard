@@ -35,4 +35,9 @@ public class BoardDAOImpl implements BoardDAO {
 	public int editok(BoardDTO bdto) {
 		return template.update("board.editok",bdto);
 	}
+
+	@Override
+	public void deleteBrd(String bseq) {
+		template.delete("board.deleteok",bseq);
+	}
 }

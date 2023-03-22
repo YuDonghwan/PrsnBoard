@@ -8,6 +8,9 @@
 	
 	<select id="getmember" parameterType="mdto" resultType="mdto">
 		select * from tblmember where id = #{id} and pw = #{pw}
-	
 	</select>
+
+	<insert id="registerok" parameterType="mdto">
+		insert into tblmember(mseq,id,pw,name,email,active) values (seqmember.nextVal,#{id},#{pw},#{name},#{email},default)
+	</insert>
 </mapper>

@@ -7,8 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.dong.board.dto.BoardDTO;
 import com.dong.board.dto.MemberDTO;
@@ -94,6 +93,18 @@ public class BoardController {
 
 			return "redirect:/board/board";
 		}
+
+		@PostMapping(value="/board/deletechk")
+	public String deletechk(HttpServletRequest req, String ids, HttpSession session) {
+
+			String[] arr = ids.split(",");
+
+			bservice.deleteBrd(arr);
+
+			return "redirect:/board/board";
+		}
+
+
 	}
 
 
